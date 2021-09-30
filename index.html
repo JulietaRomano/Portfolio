@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julieta Romano</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="/imagenes/logo.png">
+
+
+    <!--Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--Animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--Wow-->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+
+    
+    <header>
+        <input type='checkbox' id='toggle' style='display:none;' />
+            <label class='toggle-btn toggle-btn__cross' for='toggle'>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+    
+        <nav>
+            <a href="logo">
+                <img src="/imagenes/logo.png" class="logo" alt="">
+            </a>
+            <ul class="menu">
+                <li>
+                    <a href="#sobreMi">Sobre mí</a>
+                </li>
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#misTrabajos">Mis Proyectos</a>
+                </li>
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        <!--  #### PORTADA ####-->
+        <div class="headerBox">
+
+            <div class="tituloHeader wow animate__zoomIn">
+                    
+                <div class="typing-demo">
+                    <h1 class="tituloPrincipal"> <span class="tituloResponsive">Hola!</span> Soy Julieta Romano</h1>
+                </div>
+                <h6 class="wow animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="1.8s">Desarrolladora Front End</h6>
+                <div class="tituloFlecha wow bounceIn" data-wow-duration="2s" data-wow-delay="2s">
+                    <img src="/imagenes/flecha.png" alt="flecha">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+        <!--  #### Sobre mi ####-->
+        <section class="sobremi" id="sobreMi">
+            
+            <div class="sobremi-img wow bounceInLeft" data-wow-duration="2s"></div>
+            
+            <div class="sobreMi-acuarela wow animate__fadeIn"data-wow-delay=".5s" data-wow-duration="2s"></div>
+            
+            <div class="sobremi-texto wow rotateInDownRight"  data-wow-duration="1s">                
+                <h3>Sobre mi</h3>
+                <p class="sobremi-p">
+                    Mi nombre es Julieta Romano soy de Buenos Aires, Argentina. <br>
+                    Actualmente me encuentro trabajando en Coderhouse,
+                    donde doy tutorías en el curso de Desarrollo Web, enseñando temas como HTML, CSS, SASS, entre otros.  
+                    <br>
+                    Como la programación es algo que me apasiona estoy en continuo aprendizaje para perfeccionarme y lograr superarme día a día.
+                    <br>Puedes ver mi curriculum a continuación:
+                </p>
+                
+                <a href="">
+                    <div class="botonCv">
+                        Ver CV
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!--  #### Habilidades ####-->
+
+        <section class="skills-box" id="habilidades">
+
+            <h2 class="titulo wow fadeInDown" data-wow-duration="1.5s">
+                1. Habilidades principales
+            </h2>
+
+            <div class="habilidades">
+
+                <ul class="skills-bar-container">
+                    <li>
+                        <div class="progressbar-title">
+                            <h3>HTML5</h3>
+                            <span class="percent" id="html-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progressred" id="progress-html"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="progressbar-title">
+                            <h3>CSS / SASS</h3>
+                            <span class="percent" id="css-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progressblue" id="progress-css"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="progressbar-title">
+                        <h3>JavaScript / jQuery</h3>
+                        <span class="percent" id="javascript-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                        <span class="progressbar progresspurple" id="progress-javascript"></span>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="progressbar-title">
+                        <h3>React Js</h3>
+                        <span class="percent" id="php-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                        <span class="progressbar progressorange" id="progress-php"></span>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="progressbar-title">
+                        <h3>Wordpress</h3>
+                        <span class="percent" id="angular-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                        <span class="progressbar progressgreen" id="progress-angular"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="habilidades-acuarela wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".2s"></div>
+
+        </section>
+
+
+        <!--  #### Mis trabajos ####-->
+
+        <section class="misTrabajos" id="misTrabajos">
+            <h2 class="titulo wow fadeInDown" data-wow-duration="2s">
+                2. Mis Proyectos
+            </h2>  
+            <div class="trabajos">
+
+                <div class="slide hi-slide">
+
+                    <div class="hi-prev "></div>
+                    <div class="hi-next "></div>
+
+                    <ul>
+                        <li>
+                            <div class="trabajo-box">
+                                <a href="https://mascotasperdidas.vercel.app/"target="_blank">
+                                    <div class="paginaImg masc-perd"></div>
+                                </a>
+                                <a href="https://github.com/JulietaRomano/Mascotas_Perdidas"target="_blank">
+                                    <div class="paginaGitHub">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </a>
+                            </div>                        
+                        </li>
+
+                        <li>
+                            <div class="trabajo-box ">
+                                <a href="https://reinventable.vercel.app/"target="_blank">
+                                    <div class="paginaImg reinv"></div>
+                                </a>
+                                <a href="https://github.com/JulietaRomano/reinventable"target="_blank">
+                                    <div class="paginaGitHub">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </a>
+                            </div>                    
+                        </li>
+
+                        <li>
+                            <div class="trabajo-box">
+                                <a href="https://nutri-dog.vercel.app/">
+                                    <div class="paginaImg nutri"></div>
+                                </a>
+                                <a href="https://github.com/JulietaRomano/Proyecto_Js">
+                                    <div class="paginaGitHub">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </a>
+                            </div>                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+                <!--Slider Responsive-->
+            <div class="trabajos1">
+                <div class="slider">
+                    <ul>
+                        <li class="active">
+                            <div class="trabajo-box">
+                                <a href="https://mascotasperdidas.vercel.app/"target="_blank">
+                                    <div class="paginaImg masc-perd"></div>
+                                </a>
+                                <a href="https://github.com/JulietaRomano/Mascotas_Perdidas"target="_blank">
+                                    <div class="paginaGitHub">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </a>
+                            </div>                        
+                        </li>
+
+                        <li>
+                            <div class="trabajo-box ">
+                                <a href="https://reinventable.vercel.app/"target="_blank">
+                                    <div class="paginaImg reinv"></div>
+                                </a>
+                                <a href="https://github.com/JulietaRomano/reinventable"target="_blank">
+                                    <div class="paginaGitHub">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </a>
+                            </div>                    
+                        </li>
+
+                        <li>
+                            <div class="trabajo-box">
+                                <a href="https://nutri-dog.vercel.app/">
+                                    <div class="paginaImg nutri"></div>
+                                </a>
+                                <a href="https://github.com/JulietaRomano/Proyecto_Js">
+                                    <div class="paginaGitHub">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </a>
+                            </div>                        
+                        </li>
+                    </ul>
+
+                    <!--Slider Responsive-->
+                    <ol>
+                        <!-- point -->
+                        <li class="active"><i class="fa fa-circle-o"></i></li>
+                        <li><i class="fa fa-circle-o"></i></li>
+                        <li><i class="fa fa-circle-o"></i></li>
+                        <li><i class="fa fa-circle-o"></i></li>
+                        <!-- playpause -->
+                        <i class="fa playpause fa-pause-circle-o" title="pause"></i>
+                    </ol>
+                      <!-- controll -->
+                      <span class="controll active"></span>
+                      <span class="controll"></span>
+                </div>
+
+            </div>
+
+
+
+
+            <a href="">
+                <div class="proyectos-boton">
+                    ver más proyectos
+                </div>
+            </a>
+
+            <div class="trabajos-acuarela wow animate__fadeIn" data-wow-delay=".3s"></div>
+
+        </section>
+                        
+        <!-- #### Divisor ####-->
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="20" viewBox="0 0 1000 33" preserveAspectRatio="xMidYMid meet"><defs><clipPath id="clip-divider"><rect width="100%" height="100%"></rect></clipPath></defs><g id="divider" clip-path="url(#clip-divider)"><g id="Group_155" data-name="Group 155" transform="translate(-94.5 -78.5)"><path id="Path_200" data-name="Path 200" d="M94.5,84.5c21.677,0,21.677,21.756,43.354,21.756S159.531,84.5,181.208,84.5s21.677,21.756,43.354,21.756S246.239,84.5,267.917,84.5s21.677,21.756,43.353,21.756S332.945,84.5,354.622,84.5s21.677,21.756,43.353,21.756S419.653,84.5,441.33,84.5s21.677,21.756,43.353,21.756S506.361,84.5,528.037,84.5s21.678,21.756,43.354,21.756S593.066,84.5,614.741,84.5s21.674,21.756,43.349,21.756S679.764,84.5,701.44,84.5s21.675,21.756,43.352,21.756S766.469,84.5,788.148,84.5s21.676,21.756,43.352,21.756S853.178,84.5,874.854,84.5s21.677,21.756,43.353,21.756S939.885,84.5,961.562,84.5s21.678,21.756,43.355,21.756S1026.6,84.5,1048.274,84.5s21.679,21.756,43.357,21.756S1113.31,84.5,1134.987,84.5s21.677,21.756,43.352,21.756S1200.018,84.5,1221.7,84.5s21.679,21.756,43.357,21.756,21.68-21.756,43.359-21.756,21.68,21.756,43.358,21.756S1373.454,84.5,1395.136,84.5s21.683,21.756,43.364,21.756" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"></path></g></g></svg>
+
+        <!-- #### Contacto ####-->
+        <section class="contacto" id="contacto">
+
+            <div class="contacto-acuarela wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s"></div>
+
+            <h2 class="titulo wow fadeInDown" data-wow-duration="2s">
+                3. Contacto
+            </h2> 
+
+            <article class="contactoFlex">
+
+                <div class = "frame">
+
+                    <div id = "button_open_envelope">
+                        Contactame!
+                    </div>
+
+                    <div class = "message">
+                        <form method="post" action="contact.php">
+                            <input type="text" name="name" id="name" placeholder=" Nombre*: " required>
+                    
+                            <input type="email" name="email" id="email" placeholder=" E-mail*: " required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$">
+                        
+                            <input type="number" name="phone" id="phone" placeholder=" Teléfono (opcional):"> 
+                        
+                            <textarea name="message" id="messarea" placeholder=" Mensaje*: " required></textarea>
+                    
+                            <input type="text" name="address" id="address" style="display: none;">
+                            <input type="submit" value="Send" id="send">
+                        </form>
+                    </div>
+
+                    <div class = "bottom"></div>			
+                    <div class = "left"></div>
+                    <div class = "right"></div>
+                    <div class = "top"></div>
+                    <script src="js/script.js"></script>
+                </div>
+
+                <div class="contacto-info">
+                    <div class="contacto-infoFlex">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Buenos Aires, Argentina</p>
+                    </div>
+                        
+                    <div class="contacto-infoFlex">
+                        <i class="fas fa-envelope"></i>
+                        <p>romanojulietacarolina@gmail.com</p>
+                    </div>
+
+                    <p><strong>Encuentrame en redes:</strong></p>
+                    <div class="contacto-redes">
+                        <a href="https://www.linkedin.com/in/julieta-romano/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/JulietaRomano" target="_blank">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+    </main>
+
+<footer>
+    <svg viewBox="0 0 120 28">
+     <defs> 
+       <mask id="xxx">
+         <circle cx="7" cy="12" r="40" fill="#fff" />
+       </mask>
+       
+       <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="
+               1 0 0 0 0  
+               0 1 0 0 0  
+               0 0 1 0 0  
+               0 0 0 13 -9" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+         <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+      </defs> 
+    
+       <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+       <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+
+
+       <g class="gooeff">
+      <circle class="drop drop1" cx="20" cy="2" r="1.8"  />
+      <circle class="drop drop2" cx="25" cy="2.5" r="1.5"  />
+      <circle class="drop drop3" cx="16" cy="2.8" r="1.2"  />
+        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+      
+
+    
+    </svg>
+    
+      <div>Hecho con ❤ por Julieta Romano</div>
+    </footer>
+
+
+        
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+		<script type="text/javascript" src="js/jquery.hislide.js" ></script>
+        <script>
+			$('.slide').hiSlide();
+		</script>
+
+    <script src="js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

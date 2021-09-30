@@ -1,0 +1,93 @@
+.sobremi{
+    padding-top: 5rem;
+    height: 70vh;
+    margin-top: 5em;
+    position: relative;
+
+    .sobreMi-acuarela{
+    z-index: 10;
+        position: absolute;
+        bottom: -4rem;
+        left: 48rem;
+        width: 40rem;
+        height: 25rem;
+        background-image: url(/imagenes/acuarelas/sobreMi.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .sobremi-img{
+        position: absolute;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;        
+        border-radius: 100%;
+        height: 28rem;
+        width: 28rem;
+        float: left;
+        margin-left: 11rem;
+        z-index: 100;
+        background-color: yellow;
+    }
+    .sobremi-texto{
+        position: absolute;
+        z-index: 50;
+        background-color: white;
+        width: 45rem;
+        height: 21.5rem;
+        margin: 3.3rem 0 0 34rem;
+        padding:2.3rem 1.8rem 0rem 6.5rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        h3{
+            font-size: 1.8rem;
+            margin-bottom: .5rem;
+        }
+        .botonCv{
+            display: inline-block;
+            border: solid;
+            margin-top: 1rem ;
+            padding: .2rem 1rem .2rem 1rem;
+            color: #C34092;
+            transition: all .2s ease-in-out;
+            &:hover { 
+              transform: scale(1.2);
+            }
+      
+        }
+    }
+}
+
+
+
+/* ########Media Queries########*/
+@include smarthphone{
+    .sobremi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+
+    .sobreMi-acuarela{
+        display: none;
+        }
+
+        .sobremi-img{
+            position:relative;
+            height: 27rem;
+            width: 27rem;
+            margin-left: 0rem;
+            margin-bottom: 2rem;
+
+        }
+        .sobremi-texto{
+            position: relative;
+            width: 43rem;
+            height: 24rem;
+            margin: 0;
+            padding:2rem 2rem 0rem 2rem;
+            text-align: center;
+            .sobremi-p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
