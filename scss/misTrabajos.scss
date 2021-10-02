@@ -4,11 +4,11 @@
     position: relative;
     margin-bottom: 5rem;
     .trabajos-acuarela{
-        width: 10rem;
-        height: 10rem;
+        width: 160px;
+        height: 160px;
         position: absolute;
         left: 88%;
-        top: 40rem;
+        top: 640px;
         background-image: url(/imagenes/acuarelas/trabajo.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -16,22 +16,19 @@
     .proyectos-boton{
         margin-top: 7rem;
         background: #000;
-        padding: 15px 30px;
+        padding: 0.9375rem 1.875rem;
         display: inline-block;
         color: #fff;
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: MaisonNeueDemi,Arial,Helvetica,sans-serif;
         cursor: pointer;
         border: none;
-        border-radius: 50px;
+        border-radius: 3.125rem;
         transition: all .5s ease-in-out;
         &:hover { transform: scale(1.2); }
     
     }  
-    .trabajos1{
-        display: none;
-    }
 
     .trabajos{
         justify-content: space-around;
@@ -42,15 +39,15 @@
         .trabajo-box{
             height: 100%;
             width: 100%;
-            border-radius: .8rem;
+            border-radius: 0.8rem;
             z-index:0;
             
 
             .paginaImg{
                 height: 85%;
                 background-size:cover;
-                border-top-left-radius: .8rem;
-                border-top-right-radius: .8rem;
+                border-top-left-radius: 0.8rem;
+                border-top-right-radius: 0.8rem;
 
             }
             .masc-perd{
@@ -68,9 +65,9 @@
                 background-color: rgb(54, 52, 52);
                 height: 15%;
                 color: white;
-                padding-top: .5rem;
-                border-bottom-left-radius: .8rem;
-                border-bottom-right-radius: .8rem;
+                padding-top: 0.5rem;
+                border-bottom-left-radius: 0.8rem;
+                border-bottom-right-radius: 0.8rem;
                 i{
                     font-size: 1.7rem;
                 }
@@ -81,25 +78,25 @@
 }
 
 /*carousel*/
-.hi-slide { position: relative; width: 1000px; 
-    height: 310px; margin: 115px auto 0; 
+.hi-slide { position: relative; width: 62.5rem; 
+    height: 19.375rem; margin: 7.1875rem auto 0; 
 }
             
 .hi-slide .hi-next,
 .hi-slide .hi-prev 
             { position: absolute;
               top: 50%; 
-              width: 40px;
-              height: 40px; 
-              margin-top: -20px;     
-                border-radius: 50px;                           
-              line-height: 40px;
+              width: 2.5rem;
+              height: 2.5rem; 
+              margin-top: -1.25rem;     
+                border-radius: 3.125rem;                           
+              line-height: 2.5rem;
               text-align: center; 
               cursor: pointer;
               background-color: rgba(255, 255, 255, 0.952); 
               color: black;               
               transition: all 0.6s;
-              font-size: 20px; 
+              font-size: 1.25rem; 
                 font-weight: bold;
             }
            .hi-slide .hi-next:hover, 
@@ -109,19 +106,19 @@
             background-color: #fff;  
             }
             
-           .hi-slide .hi-prev { left: -60px; 
+           .hi-slide .hi-prev { left: -3.75rem; 
      }
             
     .hi-slide .hi-prev::before { content: '<'; }
-    .hi-slide .hi-next { right: -60px; }
+    .hi-slide .hi-next { right: -3.75rem; }
     .hi-slide .hi-next::before { content: '>'; }
     
             .hi-slide > ul
                     { 
                         list-style: none; 
                         position: relative;
-                        width: 1000px; 
-                        height: 310px; 
+                        width: 62.5rem; 
+                        height: 19.375rem; 
                         margin: 0;
                         padding: 0;
             }
@@ -131,8 +128,8 @@
             overflow: hidden; 
             position: absolute; 
             z-index: 0; 
-            left: 377px;
-            top: 146px; 
+            left: 23.5625rem;
+            top: 9.125rem; 
             width: 0; 
             height: 0; 
             margin: 0; 
@@ -147,16 +144,35 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+        
+
 /* ########Media Queries########*/
 @include smarthphone{
 
     .misTrabajos{
         .trabajos-acuarela{
             display: none;
+            margin: 0;
         } 
+        .proyectos-boton{
+            margin-top:0rem;
+        }
+
         .trabajos{
             overflow-x: hidden;
             transition: all .2s ease-in-out;
+            height: 45rem;
+
     
             .trabajo-box{
                 height: 100%;
@@ -165,7 +181,7 @@
                 z-index:0;
     
                 .paginaImg{
-                    height: 45%;
+                    height: 20rem;
                     background-size:cover;
                     border-top-left-radius: .8rem;
                     border-top-right-radius: .8rem;
@@ -173,7 +189,7 @@
                 }
                 .paginaGitHub{
                     background-color: rgb(54, 52, 52);
-                    height: 15%;
+                    height: 9%;
                     color: white;
                     padding-top: .5rem;
                     border-bottom-left-radius: .8rem;
@@ -184,133 +200,11 @@
                 }
             }
         }
-        .trabajos{
-            display: none;
-        }
-        .trabajos1{
-            display: block;
-        }
-
-    .slider {
-        width: 100%;
-        max-width: 750px;
-        padding: 0 50px;
-        margin: 25px auto 0;
-        height: 200px;
-        position: relative;
-      }
-      .slider ul, .slider ul li {
-        width: 100%;
-        height: 100%
-      }
-      .slider ul {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px
-      }
-      .slider ul li {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        background-size: cover; /* semon #f98686 */
-        background-position: center;
-        color: #fff;
-        font-family: serif;
-        
-            .trabajo-box{
-                height: 100%;
-                width: 100%;
-                border-radius: .8rem;
-                z-index:0;
-                .paginaImg{
-                    height: 163px;
-                    background-size:cover;
-                    border-top-left-radius: .8rem;
-                    border-top-right-radius: .8rem;
-                }
-                
-                .masc-perd{
-                    background-image: url(../imagenes/mascotas.png);
-                }
-                
-                .reinv{
-                    background-image: url(../imagenes/reinventable.png);
-                }
-                .nutri{
-                    background-image: url(../imagenes/nutridog.png);
-                }
-
-
-                .paginaGitHub{
-                    background-color: rgb(54, 52, 52);
-                    height: 28px;
-                    color: white;
-                    padding-top: .5rem;
-                    border-bottom-left-radius: .8rem;
-                    border-bottom-right-radius: .8rem;
-                    i{
-                        font-size: 2.4rem;
-                    }
-            }
+        .hi-slide { 
+            position: relative; 
+            width: 40.5rem; 
+            height: 30rem; 
         }
 
-      }
-
-
-      .slider .controll {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 44%;
-        border-bottom: 3px solid #333;
-        border-left: 3px solid #333;
-        cursor: pointer;
-        color: #333;
-      }
-      .slider .controll:first-of-type {
-        transform: rotate(45deg);
-        left: 20px
-      }
-      .slider .controll:last-of-type {
-        transform: rotate(225deg);
-        right: 20px
-      }
-      .slider .controll:hover, .slider .controll.active {
-        border-color: #f98686 /* rose */
-      }
-      .slider ol {
-        text-align: center;
-        padding-top: 10px;
-      }
-      .slider ol li {
-        display: inline-block;
-        margin-right: 5px;
-      }
-      .slider ol .fa {
-        font-size: 20px;
-        color: #333;
-        cursor: pointer;
-        font-weight: normall
-      }
-      .slider ol li:hover .fa:before, .slider ol li.active .fa:before {
-        content: "\f111"
-      }
-      /* .slider ul li.active {
-        z-index: 999;
-        left: 0
-      } */
-    }
-
-      .slider ul li:nth-of-type(2) {
-        background-image: url("http://favim.com/orig/201107/19/cute-flowers-girl-pink-pretty-Favim.com-110225.jpg")
-      }
-      .slider ul li:nth-of-type(3) {
-        background-image: url("http://www.tsitut.net/wp-content/uploads/2016/04/born-to-stand-out.jpg")
-      }
-      .slider ul li:nth-of-type(4) {
-        background-image: url("https://37.media.tumblr.com/tumblr_lxkb5dtDuF1r5o9ano1_500.jpg")
-      }
-      .slider ul li:last-of-type {
-        background-image: url("https://s-media-cache-ak0.pinimg.com/originals/03/08/5f/03085f3adecf31a0ded89aec58e5bbed.jpg")
       }
 }
