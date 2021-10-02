@@ -7,7 +7,7 @@ header{
   background-size: cover;
   background-attachment: fixed;
   
-  
+  /*menu*/
 
   nav{
     padding: 1rem 3rem 0rem 3rem;
@@ -47,16 +47,14 @@ header{
   .headerBox{
     display: flex;
     justify-content: center;
-   padding-top: 5rem;
-    height: 85%;
+    align-items: center;
+    height: 80.8vh;
     text-align: center;
     background-color: rgba(177, 55, 161, 0.171);
+    position: relative;
 
     
-    .tituloHeader{
-      margin-left: 7rem;
-      margin-top: 4rem;
-    }
+
     .tituloPrincipal{
       font-weight: 800;
       font-size: 3.5rem;
@@ -65,42 +63,91 @@ header{
     }
     h6{
       font-weight: 100;
-      margin-top: 1rem;
       font-size: 2rem;
       font-weight: 400;
     }
-    .tituloFlecha{
-      display: flex;
-      justify-content: center;
-      margin-top: 3rem;
-      img{
-        width: 45px;
-      }
+/* ############# SCROLL FADING ICON ############## */
+
+.scrollDown
+{
+    position: absolute;
+    left: 50%;
+    bottom: 200px;
+    z-index: 1;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid #fff;
+    animation: fading 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+@keyframes fading {
+    0%
+    {
+        transform: translate(0, -20px) rotate(45deg);
+        opacity: 0;
     }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translate(0, 20px) rotate(45deg);
+        opacity: 0;
+    }
+}
   }
 }
 
-.typing-demo {
-  width: 40ch;
-  animation: typing 3s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-size: 2em;
+/* ############ EFECTO ESCRITURA ########### */
+.line
+{
+    width: 30ch;
+    top: 50%;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
 }
 
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
+.animTypewriter
+{
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCussor 500ms steps(40) infinite normal;
 }
 
+@keyframes typewriter {
+    from{
+        width: 0;
+    }
+    to{
+        width: 48em;
+    }
+}
+
+@media(max-width: 768px){
+    @keyframes typewriter {
+        from{
+            width: 0;
+        }
+        to{
+            width: 38em;
+        }
+    }
+}
+
+@keyframes blinkTextCussor{
+    from{
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
 
 
 
@@ -119,152 +166,47 @@ header{
   $th_dark:#2a363b;
 /*Menu*/
 
-  header { 
+header { 
     height: 90vh;
     width: 100vw;
     background-image: url(/imagenes/alex-azabache-RJ_zZKgKrog-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-  
-    
-
-  /*Titulo*/
-  .headerBox{
-    height: 90vh;
-    background-color: rgba(124, 116, 121, 0.199);
-    
-    .tituloHeader{
-      margin:0rem;
-      display:flex;
-      flex-direction: column;
+    nav{
       justify-content: center;
-    }
-    .tituloFlecha{
-      img{
-        width: 30px;
-      }
-    }
-  }
+      background-color: rgba(124, 116, 121, 0.199);
 
-.typing-demo {
-  width: 29ch;
-}
-/*Menu*/
-    nav {
-      background-color:rgba(0, 0, 0, 0.863);
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      opacity:0;
-      transition:all 0.3s ease-in-out;
-      z-index: 700;
+      
       .logo{
         display: none;
       }
-      ul {      
-        display: flex;
+      a{
+        font-size: 1.2rem;
+      }
+    }
+    /*Titulo*/
+    .headerBox{
+      height: 81.1vh;
+      background-color: rgba(124, 116, 121, 0.199);
+      
+      .tituloHeader{
+        margin:0rem;
+        display:flex;
         flex-direction: column;
-        list-style-type:none;
-        padding:0;
-        margin:0;
-        position:absolute;
-        left:50%;
-        top:170px;
-        transition:all 0.3s ease-in-out;
-        transform:translateX(-50%);
-      
-        li {
-          transform:translateY(50px);
-          opacity:0;
-          
-          a {
-            display:block;
-            font-size:2em;
-            text-decoration:none;
-            padding:10px 0;
-            text-align:center;
-            color:#fff;
-            font-weight:bold;
-            transition:all 0.2s ease-in-out;
-            text-shadow:1px 1px 2px rgba(0,0,0,.5);
-            
-            &:hover {
-              color:$th_pink;
-            }
-          }
-        }
+        justify-content: center;
       }
-    }
-  }
+      /* ############# SCROLL FADING ICON ############## */
 
-  
-  .toggle-btn {
-    display:block;
-    position:fixed;
-    z-index:800;
-    right:10px;
-    top:10px;
-    cursor:pointer;
-    
-    .bar {
-      width:30px;
-      height:2px;
-      margin:7px auto;
-      background-color:#fff;
-      transition:all 0.3s ease-in-out;
-      box-shadow:0 0 3px 1px rgba(0,0,0,.3);
-      
-      &:nth-child(2) {
-        width:20px;
-      }
+    .scrollDown
+    {
+        left: 47%;
     }
   }
-  
-  #toggle:checked {
+}
+  /*Menu*/
 
-    &~nav {
-      opacity:1;
-      visibility:visible;
-  
-      ul {
-        top:70px;
-        
-        li {
-          transform:translateY(0px);
-          opacity:1;
-  
-          @for $i from 1 through 4 {
-              $t: $i * 0.1;
-              &:nth-child(#{$i}) {
-                transition:all 0.3s cubic-bezier(.6,0,.8,1.5) #{$t}s; 
-              }
-            }
-        }
-      }
-    }
-    
-    &+label.toggle-btn {
-      .bar {
-        background-color:red;
-  
-        &:nth-child(2) {
-          transform:translateX(50px);
-          opacity:0;
-        }
-  
-        &:nth-child(1) {
-          transform:translateY(10px) rotate(45deg);
-        }
-  
-        &:nth-child(3) {
-          transform:translateY(-8px) rotate(-45deg);
-        }
-      }
-    }
-  }
+
   
 /*Portada*/
 
@@ -272,23 +214,6 @@ header{
   display: none;
 }
 
-.typing-demo {
-  width: 29ch;
-}
-
-
-
-
-
-
-
 
 
 } 
-@include tablet{
-  main{
-    background-color: red;
-  }
-  
-  
-}

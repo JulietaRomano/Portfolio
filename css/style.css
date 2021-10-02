@@ -16,6 +16,7 @@ header {
   background-image: url(/imagenes/alex-azabache-RJ_zZKgKrog-unsplash.jpg);
   background-size: cover;
   background-attachment: fixed;
+  /*menu*/
   /*Titulo*/ }
   header nav {
     padding: 1rem 3rem 0rem 3rem;
@@ -42,13 +43,12 @@ header {
   header .headerBox {
     display: flex;
     justify-content: center;
-    padding-top: 5rem;
-    height: 85%;
+    align-items: center;
+    height: 80.8vh;
     text-align: center;
-    background-color: rgba(177, 55, 161, 0.171); }
-    header .headerBox .tituloHeader {
-      margin-left: 7rem;
-      margin-top: 4rem; }
+    background-color: rgba(177, 55, 161, 0.171);
+    position: relative;
+    /* ############# SCROLL FADING ICON ############## */ }
     header .headerBox .tituloPrincipal {
       font-weight: 800;
       font-size: 3.5rem;
@@ -56,31 +56,62 @@ header {
       text-shadow: #fcf3b2 0.1em 0.1em 0.2em; }
     header .headerBox h6 {
       font-weight: 100;
-      margin-top: 1rem;
       font-size: 2rem;
       font-weight: 400; }
-    header .headerBox .tituloFlecha {
-      display: flex;
-      justify-content: center;
-      margin-top: 3rem; }
-      header .headerBox .tituloFlecha img {
-        width: 45px; }
+    header .headerBox .scrollDown {
+      position: absolute;
+      left: 50%;
+      bottom: 200px;
+      z-index: 1;
+      text-decoration: none;
+      text-shadow: 0;
+      width: 30px;
+      height: 30px;
+      border-bottom: 5px solid #fff;
+      border-right: 5px solid #fff;
+      animation: fading 3s cubic-bezier(0.19, 1, 0.22, 1) infinite; }
 
-.typing-demo {
-  width: 40ch;
-  animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
+@keyframes fading {
+  0% {
+    transform: translate(0, -20px) rotate(45deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: translate(0, 20px) rotate(45deg);
+    opacity: 0; } }
+
+/* ############ EFECTO ESCRITURA ########### */
+.line {
+  width: 30ch;
+  top: 50%;
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
-  font-size: 2em; }
+  transform: translateY(-50%); }
 
-@keyframes typing {
+.animTypewriter {
+  animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCussor 500ms steps(40) infinite normal; }
+
+@keyframes typewriter {
   from {
-    width: 0; } }
+    width: 0; }
+  to {
+    width: 48em; } }
 
-@keyframes blink {
-  50% {
-    border-color: transparent; } }
+@media (max-width: 768px) {
+  @keyframes typewriter {
+    from {
+      width: 0; }
+    to {
+      width: 38em; } } }
+
+@keyframes blinkTextCussor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75); }
+  to {
+    border-right-color: transparent; } }
 
 /* ########Media Queries########*/
 @media (max-width: 480px) {
@@ -94,108 +125,29 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /*Titulo*/
-    /*Menu*/ }
-    header .headerBox {
-      height: 90vh;
+    /*Titulo*/ }
+    header nav {
+      justify-content: center;
       background-color: rgba(124, 116, 121, 0.199); }
+      header nav .logo {
+        display: none; }
+      header nav a {
+        font-size: 1.2rem; }
+    header .headerBox {
+      height: 81.1vh;
+      background-color: rgba(124, 116, 121, 0.199);
+      /* ############# SCROLL FADING ICON ############## */ }
       header .headerBox .tituloHeader {
         margin: 0rem;
         display: flex;
         flex-direction: column;
         justify-content: center; }
-      header .headerBox .tituloFlecha img {
-        width: 30px; }
-    header .typing-demo {
-      width: 29ch; }
-    header nav {
-      background-color: rgba(0, 0, 0, 0.863);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-      z-index: 700; }
-      header nav .logo {
-        display: none; }
-      header nav ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        left: 50%;
-        top: 170px;
-        transition: all 0.3s ease-in-out;
-        transform: translateX(-50%); }
-        header nav ul li {
-          transform: translateY(50px);
-          opacity: 0; }
-          header nav ul li a {
-            display: block;
-            font-size: 2em;
-            text-decoration: none;
-            padding: 10px 0;
-            text-align: center;
-            color: #fff;
-            font-weight: bold;
-            transition: all 0.2s ease-in-out;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
-            header nav ul li a:hover {
-              color: #E84A5F; }
-  .toggle-btn {
-    display: block;
-    position: fixed;
-    z-index: 800;
-    right: 10px;
-    top: 10px;
-    cursor: pointer; }
-    .toggle-btn .bar {
-      width: 30px;
-      height: 2px;
-      margin: 7px auto;
-      background-color: #fff;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3); }
-      .toggle-btn .bar:nth-child(2) {
-        width: 20px; }
-  #toggle:checked ~ nav {
-    opacity: 1;
-    visibility: visible; }
-    #toggle:checked ~ nav ul {
-      top: 70px; }
-      #toggle:checked ~ nav ul li {
-        transform: translateY(0px);
-        opacity: 1; }
-        #toggle:checked ~ nav ul li:nth-child(1) {
-          transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s; }
-        #toggle:checked ~ nav ul li:nth-child(2) {
-          transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s; }
-        #toggle:checked ~ nav ul li:nth-child(3) {
-          transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s; }
-        #toggle:checked ~ nav ul li:nth-child(4) {
-          transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s; }
-  #toggle:checked + label.toggle-btn .bar {
-    background-color: red; }
-    #toggle:checked + label.toggle-btn .bar:nth-child(2) {
-      transform: translateX(50px);
-      opacity: 0; }
-    #toggle:checked + label.toggle-btn .bar:nth-child(1) {
-      transform: translateY(10px) rotate(45deg); }
-    #toggle:checked + label.toggle-btn .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg); }
+      header .headerBox .scrollDown {
+        left: 47%; }
+  /*Menu*/
   /*Portada*/
   .tituloResponsive {
-    display: none; }
-  .typing-demo {
-    width: 29ch; } }
-
-@media (min-width: 480px) and (max-width: 1366px) {
-  main {
-    background-color: red; } }
+    display: none; } }
 
 .sobremi {
   padding-top: 5rem;
@@ -484,31 +436,29 @@ header {
   position: relative;
   margin-bottom: 5rem; }
   .misTrabajos .trabajos-acuarela {
-    width: 10rem;
-    height: 10rem;
+    width: 160px;
+    height: 160px;
     position: absolute;
     left: 88%;
-    top: 40rem;
+    top: 640px;
     background-image: url(/imagenes/acuarelas/trabajo.png);
     background-size: contain;
     background-repeat: no-repeat; }
   .misTrabajos .proyectos-boton {
     margin-top: 7rem;
     background: #000;
-    padding: 15px 30px;
+    padding: 0.9375rem 1.875rem;
     display: inline-block;
     color: #fff;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: MaisonNeueDemi,Arial,Helvetica,sans-serif;
     cursor: pointer;
     border: none;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     transition: all .5s ease-in-out; }
     .misTrabajos .proyectos-boton:hover {
       transform: scale(1.2); }
-  .misTrabajos .trabajos1 {
-    display: none; }
   .misTrabajos .trabajos {
     justify-content: space-around;
     overflow-x: hidden;
@@ -516,13 +466,13 @@ header {
     .misTrabajos .trabajos .trabajo-box {
       height: 100%;
       width: 100%;
-      border-radius: .8rem;
+      border-radius: 0.8rem;
       z-index: 0; }
       .misTrabajos .trabajos .trabajo-box .paginaImg {
         height: 85%;
         background-size: cover;
-        border-top-left-radius: .8rem;
-        border-top-right-radius: .8rem; }
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem; }
       .misTrabajos .trabajos .trabajo-box .masc-perd {
         background-image: url(../imagenes/mascotas.png); }
       .misTrabajos .trabajos .trabajo-box .reinv {
@@ -533,9 +483,9 @@ header {
         background-color: #363434;
         height: 15%;
         color: white;
-        padding-top: .5rem;
-        border-bottom-left-radius: .8rem;
-        border-bottom-right-radius: .8rem; }
+        padding-top: 0.5rem;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem; }
         .misTrabajos .trabajos .trabajo-box .paginaGitHub i {
           font-size: 1.7rem; }
     .misTrabajos .trabajos:hover {
@@ -544,25 +494,25 @@ header {
 /*carousel*/
 .hi-slide {
   position: relative;
-  width: 1000px;
-  height: 310px;
-  margin: 115px auto 0; }
+  width: 62.5rem;
+  height: 19.375rem;
+  margin: 7.1875rem auto 0; }
 
 .hi-slide .hi-next,
 .hi-slide .hi-prev {
   position: absolute;
   top: 50%;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  border-radius: 50px;
-  line-height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: -1.25rem;
+  border-radius: 3.125rem;
+  line-height: 2.5rem;
   text-align: center;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.952);
   color: black;
   transition: all 0.6s;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold; }
 
 .hi-slide .hi-next:hover,
@@ -571,13 +521,13 @@ header {
   background-color: #fff; }
 
 .hi-slide .hi-prev {
-  left: -60px; }
+  left: -3.75rem; }
 
 .hi-slide .hi-prev::before {
   content: '<'; }
 
 .hi-slide .hi-next {
-  right: -60px; }
+  right: -3.75rem; }
 
 .hi-slide .hi-next::before {
   content: '>'; }
@@ -585,8 +535,8 @@ header {
 .hi-slide > ul {
   list-style: none;
   position: relative;
-  width: 1000px;
-  height: 310px;
+  width: 62.5rem;
+  height: 19.375rem;
   margin: 0;
   padding: 0; }
 
@@ -594,8 +544,8 @@ header {
   overflow: hidden;
   position: absolute;
   z-index: 0;
-  left: 377px;
-  top: 146px;
+  left: 23.5625rem;
+  top: 9.125rem;
   width: 0;
   height: 0;
   margin: 0;
@@ -608,125 +558,38 @@ header {
 
 /* ########Media Queries########*/
 @media (max-width: 480px) {
-  .misTrabajos {
-    /* .slider ul li.active {
-        z-index: 999;
-        left: 0
-      } */ }
-    .misTrabajos .trabajos-acuarela {
-      display: none; }
-    .misTrabajos .trabajos {
-      overflow-x: hidden;
-      transition: all .2s ease-in-out; }
-      .misTrabajos .trabajos .trabajo-box {
-        height: 100%;
-        width: 100%;
-        border-radius: .8rem;
-        z-index: 0; }
-        .misTrabajos .trabajos .trabajo-box .paginaImg {
-          height: 45%;
-          background-size: cover;
-          border-top-left-radius: .8rem;
-          border-top-right-radius: .8rem; }
-        .misTrabajos .trabajos .trabajo-box .paginaGitHub {
-          background-color: #363434;
-          height: 15%;
-          color: white;
-          padding-top: .5rem;
-          border-bottom-left-radius: .8rem;
-          border-bottom-right-radius: .8rem; }
-          .misTrabajos .trabajos .trabajo-box .paginaGitHub i {
-            font-size: 1.7rem; }
-    .misTrabajos .trabajos {
-      display: none; }
-    .misTrabajos .trabajos1 {
-      display: block; }
-    .misTrabajos .slider {
+  .misTrabajos .trabajos-acuarela {
+    display: none;
+    margin: 0; }
+  .misTrabajos .proyectos-boton {
+    margin-top: 0rem; }
+  .misTrabajos .trabajos {
+    overflow-x: hidden;
+    transition: all .2s ease-in-out;
+    height: 45rem; }
+    .misTrabajos .trabajos .trabajo-box {
+      height: 100%;
       width: 100%;
-      max-width: 750px;
-      padding: 0 50px;
-      margin: 25px auto 0;
-      height: 200px;
-      position: relative; }
-    .misTrabajos .slider ul, .misTrabajos .slider ul li {
-      width: 100%;
-      height: 100%; }
-    .misTrabajos .slider ul {
-      position: relative;
-      overflow: hidden;
-      border-radius: 15px; }
-    .misTrabajos .slider ul li {
-      position: absolute;
-      top: 0;
-      left: -100%;
-      background-size: cover;
-      /* semon #f98686 */
-      background-position: center;
-      color: #fff;
-      font-family: serif; }
-      .misTrabajos .slider ul li .trabajo-box {
-        height: 100%;
-        width: 100%;
-        border-radius: .8rem;
-        z-index: 0; }
-        .misTrabajos .slider ul li .trabajo-box .paginaImg {
-          height: 163px;
-          background-size: cover;
-          border-top-left-radius: .8rem;
-          border-top-right-radius: .8rem; }
-        .misTrabajos .slider ul li .trabajo-box .masc-perd {
-          background-image: url(../imagenes/mascotas.png); }
-        .misTrabajos .slider ul li .trabajo-box .reinv {
-          background-image: url(../imagenes/reinventable.png); }
-        .misTrabajos .slider ul li .trabajo-box .nutri {
-          background-image: url(../imagenes/nutridog.png); }
-        .misTrabajos .slider ul li .trabajo-box .paginaGitHub {
-          background-color: #363434;
-          height: 28px;
-          color: white;
-          padding-top: .5rem;
-          border-bottom-left-radius: .8rem;
-          border-bottom-right-radius: .8rem; }
-          .misTrabajos .slider ul li .trabajo-box .paginaGitHub i {
-            font-size: 2.4rem; }
-    .misTrabajos .slider .controll {
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      top: 44%;
-      border-bottom: 3px solid #333;
-      border-left: 3px solid #333;
-      cursor: pointer;
-      color: #333; }
-    .misTrabajos .slider .controll:first-of-type {
-      transform: rotate(45deg);
-      left: 20px; }
-    .misTrabajos .slider .controll:last-of-type {
-      transform: rotate(225deg);
-      right: 20px; }
-    .misTrabajos .slider .controll:hover, .misTrabajos .slider .controll.active {
-      border-color: #f98686; }
-    .misTrabajos .slider ol {
-      text-align: center;
-      padding-top: 10px; }
-    .misTrabajos .slider ol li {
-      display: inline-block;
-      margin-right: 5px; }
-    .misTrabajos .slider ol .fa {
-      font-size: 20px;
-      color: #333;
-      cursor: pointer;
-      font-weight: normall; }
-    .misTrabajos .slider ol li:hover .fa:before, .misTrabajos .slider ol li.active .fa:before {
-      content: "\f111"; }
-  .slider ul li:nth-of-type(2) {
-    background-image: url("http://favim.com/orig/201107/19/cute-flowers-girl-pink-pretty-Favim.com-110225.jpg"); }
-  .slider ul li:nth-of-type(3) {
-    background-image: url("http://www.tsitut.net/wp-content/uploads/2016/04/born-to-stand-out.jpg"); }
-  .slider ul li:nth-of-type(4) {
-    background-image: url("https://37.media.tumblr.com/tumblr_lxkb5dtDuF1r5o9ano1_500.jpg"); }
-  .slider ul li:last-of-type {
-    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/03/08/5f/03085f3adecf31a0ded89aec58e5bbed.jpg"); } }
+      border-radius: .8rem;
+      z-index: 0; }
+      .misTrabajos .trabajos .trabajo-box .paginaImg {
+        height: 20rem;
+        background-size: cover;
+        border-top-left-radius: .8rem;
+        border-top-right-radius: .8rem; }
+      .misTrabajos .trabajos .trabajo-box .paginaGitHub {
+        background-color: #363434;
+        height: 9%;
+        color: white;
+        padding-top: .5rem;
+        border-bottom-left-radius: .8rem;
+        border-bottom-right-radius: .8rem; }
+        .misTrabajos .trabajos .trabajo-box .paginaGitHub i {
+          font-size: 1.7rem; }
+  .misTrabajos .hi-slide {
+    position: relative;
+    width: 40.5rem;
+    height: 30rem; } }
 
 .contacto {
   padding-top: 5rem;

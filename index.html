@@ -7,8 +7,8 @@
     <title>Julieta Romano</title>
     <!-- Logo -->
     <link rel="shortcut icon" href="/imagenes/logo.png">
-
-
+<!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Font Awesome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
     <!--Google Font-->
@@ -28,12 +28,6 @@
 
     
     <header>
-        <input type='checkbox' id='toggle' style='display:none;' />
-            <label class='toggle-btn toggle-btn__cross' for='toggle'>
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </label>
     
         <nav>
             <a href="logo">
@@ -59,26 +53,26 @@
 
             <div class="tituloHeader wow animate__zoomIn">
                     
-                <div class="typing-demo">
+                <div class="line animTypewriter">
                     <h1 class="tituloPrincipal"> <span class="tituloResponsive">Hola!</span> Soy Julieta Romano</h1>
                 </div>
                 <h6 class="wow animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="1.8s">Desarrolladora Front End</h6>
-                <div class="tituloFlecha wow bounceIn" data-wow-duration="2s" data-wow-delay="2s">
-                    <img src="/imagenes/flecha.png" alt="flecha">
-                </div>
+                
+                
+                <a href="#sobreMi">
+                    <div class="scrollDown"></div>
+                </a>
             </div>
 
         </div>
     </header>
-
-
     <main>
         <!--  #### Sobre mi ####-->
         <section class="sobremi" id="sobreMi">
             
             <div class="sobremi-img wow bounceInLeft" data-wow-duration="2s"></div>
             
-            <div class="sobreMi-acuarela wow animate__fadeIn"data-wow-delay=".5s" data-wow-duration="2s"></div>
+            <div class="sobreMi-acuarela"data-aos="zoom-in-right"></div>
             
             <div class="sobremi-texto wow rotateInDownRight"  data-wow-duration="1s">                
                 <h3>Sobre mi</h3>
@@ -103,7 +97,7 @@
 
         <section class="skills-box" id="habilidades">
 
-            <h2 class="titulo wow fadeInDown" data-wow-duration="1.5s">
+            <h2 class="titulo "data-aos="fade-down">
                 1. Habilidades principales
             </h2>
 
@@ -159,7 +153,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="habilidades-acuarela wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".2s"></div>
+            <div class="habilidades-acuarela" data-aos="fade-right"></div>
 
         </section>
 
@@ -167,7 +161,7 @@
         <!--  #### Mis trabajos ####-->
 
         <section class="misTrabajos" id="misTrabajos">
-            <h2 class="titulo wow fadeInDown" data-wow-duration="2s">
+            <h2 class="titulo"data-aos="fade-down">
                 2. Mis Proyectos
             </h2>  
             <div class="trabajos">
@@ -219,78 +213,13 @@
                     </ul>
                 </div>
             </div>
-
-                <!--Slider Responsive-->
-            <div class="trabajos1">
-                <div class="slider">
-                    <ul>
-                        <li class="active">
-                            <div class="trabajo-box">
-                                <a href="https://mascotasperdidas.vercel.app/"target="_blank">
-                                    <div class="paginaImg masc-perd"></div>
-                                </a>
-                                <a href="https://github.com/JulietaRomano/Mascotas_Perdidas"target="_blank">
-                                    <div class="paginaGitHub">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                </a>
-                            </div>                        
-                        </li>
-
-                        <li>
-                            <div class="trabajo-box ">
-                                <a href="https://reinventable.vercel.app/"target="_blank">
-                                    <div class="paginaImg reinv"></div>
-                                </a>
-                                <a href="https://github.com/JulietaRomano/reinventable"target="_blank">
-                                    <div class="paginaGitHub">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                </a>
-                            </div>                    
-                        </li>
-
-                        <li>
-                            <div class="trabajo-box">
-                                <a href="https://nutri-dog.vercel.app/">
-                                    <div class="paginaImg nutri"></div>
-                                </a>
-                                <a href="https://github.com/JulietaRomano/Proyecto_Js">
-                                    <div class="paginaGitHub">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                </a>
-                            </div>                        
-                        </li>
-                    </ul>
-
-                    <!--Slider Responsive-->
-                    <ol>
-                        <!-- point -->
-                        <li class="active"><i class="fa fa-circle-o"></i></li>
-                        <li><i class="fa fa-circle-o"></i></li>
-                        <li><i class="fa fa-circle-o"></i></li>
-                        <li><i class="fa fa-circle-o"></i></li>
-                        <!-- playpause -->
-                        <i class="fa playpause fa-pause-circle-o" title="pause"></i>
-                    </ol>
-                      <!-- controll -->
-                      <span class="controll active"></span>
-                      <span class="controll"></span>
-                </div>
-
-            </div>
-
-
-
-
             <a href="">
                 <div class="proyectos-boton">
                     ver más proyectos
                 </div>
             </a>
 
-            <div class="trabajos-acuarela wow animate__fadeIn" data-wow-delay=".3s"></div>
+            <div class="trabajos-acuarela "data-aos="zoom-in"></div>
 
         </section>
                         
@@ -301,9 +230,9 @@
         <!-- #### Contacto ####-->
         <section class="contacto" id="contacto">
 
-            <div class="contacto-acuarela wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s"></div>
+            <div class="contacto-acuarela" data-aos="fade-up-right"></div>
 
-            <h2 class="titulo wow fadeInDown" data-wow-duration="2s">
+            <h2 class="titulo"data-aos="fade-down">
                 3. Contacto
             </h2> 
 
@@ -311,7 +240,7 @@
 
                 <div class = "frame">
 
-                    <div id = "button_open_envelope">
+                    <div id ="button_open_envelope">
                         Contactame!
                     </div>
 
@@ -334,7 +263,6 @@
                     <div class = "left"></div>
                     <div class = "right"></div>
                     <div class = "top"></div>
-                    <script src="js/script.js"></script>
                 </div>
 
                 <div class="contacto-info">
@@ -412,10 +340,18 @@
 			$('.slide').hiSlide();
 		</script>
 
+
     <script src="js/wow.min.js"></script>
         <script>
         new WOW().init();
         </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <script src="/js/main.js"></script>
 
 </body>
