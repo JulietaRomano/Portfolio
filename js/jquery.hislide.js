@@ -6,6 +6,8 @@
             interval: 2000,
         };
         $.extend(true, setting, options);
+
+
         let leftResponsive=0;
         let widthResponsive=320;
         if($(screen.width)[0] > 400){
