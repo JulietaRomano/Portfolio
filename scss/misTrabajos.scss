@@ -158,7 +158,6 @@
 
 /* ########Media Queries########*/
 @include smarthphone{
-
     .misTrabajos{
         .trabajos-acuarela{
             display: none;
@@ -172,6 +171,10 @@
             overflow-x: hidden;
             transition: all .2s ease-in-out;
             height: 45rem;
+            &:hover{
+                transform: none;
+            }
+
 
             .trabajo-box{
                 height: 100%;
@@ -199,11 +202,26 @@
                 }
             }
         }
+
+
         .hi-slide { 
             position: relative; 
             width: 40.5rem; 
             height: 30rem; 
         }
+
+
+
+    
+            
+    .hi-slide .hi-prev { left: -1.75rem;}
+    .hi-slide .hi-prev::before { content: '<'; }
+    .hi-slide .hi-next { right: -1.75rem; }
+    .hi-slide .hi-next::before { content: '>'; }
+
+            
+            
+   
 
       }
 }

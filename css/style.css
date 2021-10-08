@@ -128,14 +128,14 @@ header {
     /*Titulo*/ }
     header nav {
       justify-content: center;
-      background-color: rgba(124, 116, 121, 0.199); }
+      background-color: rgba(42, 24, 19, 0.253); }
       header nav .logo {
         display: none; }
       header nav a {
         font-size: 1.2rem; }
     header .headerBox {
-      height: 81.1vh;
-      background-color: rgba(124, 116, 121, 0.199);
+      height: 81vh;
+      background-color: rgba(42, 24, 19, 0.253);
       /* ############# SCROLL FADING ICON ############## */ }
       header .headerBox .tituloHeader {
         margin: 0rem;
@@ -567,6 +567,8 @@ header {
     overflow-x: hidden;
     transition: all .2s ease-in-out;
     height: 45rem; }
+    .misTrabajos .trabajos:hover {
+      transform: none; }
     .misTrabajos .trabajos .trabajo-box {
       height: 100%;
       width: 100%;
@@ -589,7 +591,15 @@ header {
   .misTrabajos .hi-slide {
     position: relative;
     width: 40.5rem;
-    height: 30rem; } }
+    height: 30rem; }
+  .misTrabajos .hi-slide .hi-prev {
+    left: -1.75rem; }
+  .misTrabajos .hi-slide .hi-prev::before {
+    content: '<'; }
+  .misTrabajos .hi-slide .hi-next {
+    right: -1.75rem; }
+  .misTrabajos .hi-slide .hi-next::before {
+    content: '>'; } }
 
 .contacto {
   padding-top: 5rem;
