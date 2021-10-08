@@ -10,6 +10,7 @@
 
         let leftResponsive=0;
         let widthResponsive=320;
+        
         if($(screen.width)[0] > 400){
             leftResponsive=243;
             widthResponsive=480;
