@@ -4,9 +4,12 @@ header{
   height: 95vh;
   width: 100vw;
   background-image: url(/imagenes/alex-azabache-RJ_zZKgKrog-unsplash.jpg);
-  background-size: cover;
+  background-size: cover; 
   background-attachment: fixed;
-  
+  .color{
+    background-color: rgba(177, 55, 161, 0.171);
+    height: 100%;
+  }
   /*menu*/
 
   nav{
@@ -16,7 +19,6 @@ header{
     align-items: center;
     justify-content: space-between;
     font-size: 1.1rem;
-    background-color: rgba(177, 55, 161, 0.171);
 
 
     a{
@@ -50,7 +52,6 @@ header{
     align-items: center;
     height: 80.8vh;
     text-align: center;
-    background-color: rgba(177, 55, 161, 0.171);
     position: relative;
 
     
@@ -169,13 +170,13 @@ header{
 header { 
     height: 90vh;
     width: 100vw;
-    background-image: url(/imagenes/alex-azabache-RJ_zZKgKrog-unsplash.jpg);
+    background-image: url(/imagenes/alex-azabache-RJ_zZKgKrog-unsplash.jpg), rgba(42, 24, 19, 0.253);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
     nav{
       justify-content: center;
-      background-color: rgba(42, 24, 19, 0.253);
 
       
       .logo{
@@ -187,9 +188,6 @@ header {
     }
     /*Titulo*/
     .headerBox{
-      height: 81vh;
-      background-color: rgba(42, 24, 19, 0.253);
-
 
       .tituloHeader{
         margin:0rem;
@@ -207,8 +205,6 @@ header {
 }
   /*Menu*/
 
-
-  
 /*Portada*/
 
 .tituloResponsive{
