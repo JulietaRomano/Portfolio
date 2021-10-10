@@ -25,7 +25,10 @@
         float: left;
         margin-left: 11rem;
         z-index: 100;
-        background-color: yellow;
+        background-image: url(../imagenes/julietaimg.jpeg);
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
     }
     .sobremi-texto{
         position: absolute;
@@ -91,3 +94,41 @@
         }
     }
 }
+
+@include tablet{
+    
+    .sobremi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+
+    .sobreMi-acuarela{
+        display: block;
+        left: 21rem;
+        width: 40rem;
+        height: 25rem;
+        }
+
+        .sobremi-img{
+            position:relative;
+            height: 27rem;
+            width: 27rem;
+            margin-left: 0rem;
+            margin-bottom: 2rem;
+
+        }
+        .sobremi-texto{
+            position: relative;
+            width: 43rem;
+            height: 24rem;
+            margin: 0;
+            padding:2rem 2rem 0rem 2rem;
+            text-align: center;
+            .sobremi-p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    }

@@ -18,14 +18,16 @@ header {
   background-attachment: fixed;
   /*menu*/
   /*Titulo*/ }
+  header .color {
+    background-color: rgba(177, 55, 161, 0.171);
+    height: 100%; }
   header nav {
     padding: 1rem 3rem 0rem 3rem;
     display: flex;
     width: 100vw;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.1rem;
-    background-color: rgba(177, 55, 161, 0.171); }
+    font-size: 1.1rem; }
     header nav a {
       color: black;
       height: 6.4rem; }
@@ -46,7 +48,6 @@ header {
     align-items: center;
     height: 80.8vh;
     text-align: center;
-    background-color: rgba(177, 55, 161, 0.171);
     position: relative;
     /* ############# SCROLL FADING ICON ############## */ }
     header .headerBox .tituloPrincipal {
@@ -121,21 +122,18 @@ header {
   header {
     height: 90vh;
     width: 100vw;
-    background-image: url(/imagenes/alex-azabache-RJ_zZKgKrog-unsplash.jpg);
+    background-image: url(/imagenes/alex-azabache-RJ_zZKgKrog-unsplash.jpg), rgba(42, 24, 19, 0.253);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     /*Titulo*/ }
     header nav {
-      justify-content: center;
-      background-color: rgba(42, 24, 19, 0.253); }
+      justify-content: center; }
       header nav .logo {
         display: none; }
       header nav a {
         font-size: 1.2rem; }
     header .headerBox {
-      height: 81vh;
-      background-color: rgba(42, 24, 19, 0.253);
       /* ############# SCROLL FADING ICON ############## */ }
       header .headerBox .tituloHeader {
         margin: 0rem;
@@ -173,7 +171,10 @@ header {
     float: left;
     margin-left: 11rem;
     z-index: 100;
-    background-color: yellow; }
+    background-image: url(../imagenes/julietaimg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
   .sobremi .sobremi-texto {
     position: absolute;
     z-index: 50;
@@ -206,6 +207,34 @@ header {
     padding-top: 1rem; }
     .sobremi .sobreMi-acuarela {
       display: none; }
+    .sobremi .sobremi-img {
+      position: relative;
+      height: 27rem;
+      width: 27rem;
+      margin-left: 0rem;
+      margin-bottom: 2rem; }
+    .sobremi .sobremi-texto {
+      position: relative;
+      width: 43rem;
+      height: 24rem;
+      margin: 0;
+      padding: 2rem 2rem 0rem 2rem;
+      text-align: center; }
+      .sobremi .sobremi-texto .sobremi-p {
+        font-size: 1.2rem; } }
+
+@media (min-width: 500px) and (max-width: 1366px) {
+  .sobremi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem; }
+    .sobremi .sobreMi-acuarela {
+      display: block;
+      left: 21rem;
+      width: 40rem;
+      height: 25rem; }
     .sobremi .sobremi-img {
       position: relative;
       height: 27rem;
